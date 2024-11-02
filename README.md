@@ -1,1 +1,1 @@
-# snake_game_project
+# Final Project: The Snake Game
