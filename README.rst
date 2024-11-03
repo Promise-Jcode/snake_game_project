@@ -1,7 +1,10 @@
 Snake Game
 ==========
 
-This project is a simple implementation of the classic Snake Game using Python and the Pygame library. In this game, the player controls a snake that grows in length by eating fruits while avoiding collisions with the walls and itself. The objective is to score as many points as possible by collecting fruits.
+This project is a simple implementation of the classic Snake Game using Python and the Pygame library. 
+In this game, the player controls a snake that grows in length by eating fruits while avoiding 
+collisions with the walls and itself. The objective is to score as many points as possible by 
+collecting fruits.
 
 Features
 --------
@@ -20,12 +23,15 @@ Requirements
 
 Installation
 ------------
-
-To install the required dependencies, run the following command: ``pip install pygame``.
+Make sure python is installed on your local machine.
+To install the required dependencies, run the following command: ``pip3 install pygame``or 
+``pip install pygame``.
 
 
 Gameplay
 --------
+
+To start the game, run the following command ``python3 snake_game.py``or ``python snake_game.py``.
 
 - Use the arrow keys to control the direction of the snake:
   - **Up Arrow**: Move Up
@@ -41,6 +47,4 @@ Unit Tests
 
 This project includes unit tests to verify the game logic. You can run the tests using the following command:
  ``python -m unittest test_snake_game.py``.
-
-
 

@@ -6,7 +6,7 @@
 
 ## Instruction To Run The Game
 - Navigate to the project folder on terminal.
-- Run `python3 snake_game.py`
+- Run `python3 snake_game.py` `or ``python snake_game.py``.
 
 ## Instruction To Run The Test Cases
 - Navigate to the project folder on terminal.

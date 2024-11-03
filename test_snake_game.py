@@ -12,14 +12,12 @@ class TestSnakeGame(unittest.TestCase):
         """Test that the snake's initial position is set correctly."""
         self.assertEqual(self.game.snake_position, [100, 50])
         self.assertEqual(self.game.snake_body, [[100, 50], [90, 50], [80, 50], [70, 50]])
-        print("test_initial_snake_position passed")
 
     def test_fruit_generation(self):
         """Test that fruit is generated within the window boundaries."""
         fruit_position = self.game.generate_fruit_position()
         self.assertTrue(0 <= fruit_position[0] < self.game.window_x)
         self.assertTrue(0 <= fruit_position[1] < self.game.window_y)
-        print("test_fruit_generation passed")
 
     def test_snake_direction_change(self):
         """Test that the snake changes direction correctly."""
@@ -32,7 +30,6 @@ class TestSnakeGame(unittest.TestCase):
         self.game.change_to = "DOWN"
         self.game.update_snake_direction()
         self.assertNotEqual(self.game.direction, "DOWN")  # Should still be UP
-        print("test_snake_direction_change passed")
 
     def test_snake_move(self):
         """Test the snake moves in the correct direction."""
@@ -46,7 +43,6 @@ class TestSnakeGame(unittest.TestCase):
         self.game.direction = "UP"
         self.game.move_snake()
         self.assertEqual(self.game.snake_position[1], initial_position[1] - 10)
-        print("test_snake_move passed")
 
     def test_snake_eats_fruit(self):
         """Test that the snake grows and score increases when eating fruit."""
@@ -60,7 +56,6 @@ class TestSnakeGame(unittest.TestCase):
         # Check that snake length increases and score updates
         self.assertEqual(len(self.game.snake_body), initial_length + 1)
         self.assertEqual(self.game.score, 10)
-        print("test_snake_eats_fruit passed")
 
     def test_snake_hits_wall(self):
         """Test that game over is triggered when snake hits the wall."""
@@ -71,7 +66,6 @@ class TestSnakeGame(unittest.TestCase):
             self.game.move_snake()
             self.game.check_game_over()
             mock_game_over.assert_called_once()
-        print("test_snake_hits_wall passed")
 
     def test_snake_hits_itself(self):
         """Test that game over is triggered when the snake hits itself."""
@@ -82,7 +76,6 @@ class TestSnakeGame(unittest.TestCase):
         with patch.object(self.game, 'game_over') as mock_game_over:
             self.game.check_game_over()
             mock_game_over.assert_called_once()
-        print("test_snake_hits_itself passed")
 
 
 if __name__ == "__main__":

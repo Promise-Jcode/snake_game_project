@@ -68,7 +68,7 @@ class SnakeGame:
         my_font = pygame.font.SysFont("times new roman", 50)
 
         # Create the "Game Over" text surface
-        game_over_surface = my_font.render("Your Score is : " + str(self.score), True, self.red)
+        game_over_surface = my_font.render("Game Over. Your Score is : " + str(self.score), True, self.red)
 
         # Get the rectangular area for the game over text
         game_over_rect = game_over_surface.get_rect()
